@@ -1,0 +1,206 @@
+:root {
+    --primary-color: #18ceb9; /* Teal for a modern look */
+    --secondary-color: #095f6b;
+    --text-color: #E0E0E0; /* Light text for readability */
+    --background-color: #212121; /* Dark background for better contrast */
+    --card-bg-color: rgba(255, 255, 255, 0.1); /* Subtle card background */
+    --card-hover-color: rgb(33, 65, 74);
+    --header-bg-color: rgba(0, 0, 0, 0.85);
+    --footer-bg-color: rgba(0, 0, 0, 0.85);
+    --animation-duration: 1s;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    background-size: cover;
+    color: var(--text-color);
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+header, footer {
+    background: var(--header-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 30px; /* Increased padding */
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3rem; /* Increased font size */
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.15rem; /* Increased font size for readability */
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0; /* Increased margin */
+    font-size: 1.5rem; /* Increased text size */
+}
+
+li i {
+    margin-right: 15px;
+    font-size: 30px; /* Increased icon size */
+    color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Skill boxes, project cards, and achievements are centered */
+.skill-box, .project-card, .achievement-container img {
+    background: var(--card-bg-color);
+    padding: 30px; /* Increased padding */
+    margin: 30px; /* Increased margin */
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    font-size: 1.3rem; /* Larger text inside cards */
+}
+
+.skill-box:hover, .project-card:hover, .achievement-container img:hover {
+    transform: scale(1.1); /* Slightly bigger hover effect */
+    background: var(--card-hover-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Skill section */
+.skill-box {
+    width: 180px;
+}
+
+.skill-box img {
+    width: 100px; /* Increased icon size */
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* Achievement section */
+.achievement-container {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.achievement-container img {
+    height: 200px; /* Increased image size */
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Button and hover effect */
+button, .btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.social-links a {
+    color: var(--text-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 2rem; /* Increased size for social icons */
+    transition: color 0.3s ease, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2); /* Hover scale effect */
+}
+
+.project-card {
+    width: 350px; /* Increased card width */
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+/* Achievement section */
+.achievement-container .open-btn {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 120px;
+    padding: 10px 15px; /* Decrease padding for smaller size */
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #e4da10;
+    font-size: 1rem; /* Decrease font size */
+    width: 100px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.achievement-container .open-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px); /* Hover lift effect */
+}
+
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Start lower */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+@media (max-width: 768px) {
+    .achievement-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}

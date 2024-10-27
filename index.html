@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hema Sri Harsha Guggilam Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guggilam Hema Sri Harsha</h1>
+        <nav>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="introduction fade-in">
+        <img src="IMG-20241027-WA0007[1].jpg" alt="Hema Sri Harsha" class="profile-photo">
+        <div class="intro-text">
+            <h2>About Me</h2>
+            <p>Hello! I'm a B.Tech 2nd-year Computer Science Engineering student. I am proficient in English, Telugu, Hindi, and German. I enjoy cooking, playing musical instruments, traveling, and discovering new things. I have experience in Excel and Figma. My interests include exploring the world and learning about diverse cultures.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="container">
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/3/35/20190417225046%21The_C_Programming_Language_logo.svg/120px-The_C_Programming_Language_logo.svg.png" alt="C Icon">
+                <p>C</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/911px-ISO_C%2B%2B_Logo.svg.png" alt="C++ Icon">
+                <p>C++</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/935px-Python-logo-notext.svg.png" alt="Python Icon">
+                <p>Python</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/560px-Java_programming_language_logo.svg.png" alt="Java Icon">
+                <p>Java</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://static.djangoproject.com/img/logos/django-logo-positive.png" alt="Django Icon">
+                <p>Django</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Icon">
+                <p>HTML</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" alt="Excel Icon">
+                <p>Excel</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop Icon">
+                <p>Photoshop</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma Icon">
+                <p>Figma</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="container">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="fade-in">
+        <h2>Achievements</h2>
+        <div class="achievement-container">
+            <img src="achievement1.jpg" alt="Achievement 1">
+            <a href="achievement1-certificate-link" class="open-btn">Open</a>
+            <img src="achievement2.jpg" alt="Achievement 2">
+            <a href="achievement2-certificate-link" class="open-btn">Open</a>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://github.com/hemasriharsha" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/harsha-guggilam-7b7006296/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Guggilam Hema Sri Harsha</p>
+    </footer>
+
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el) => {
+                if (isElementInViewport(el)) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScrollAnimation);
+        document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+    </script>
+</body>
+</html>
